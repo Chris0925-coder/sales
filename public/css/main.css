@@ -1,0 +1,96 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Roboto", system-ui, sans-serif;;
+}
+
+h1 {
+	position: absolute;
+	text-align: center;
+	font-size: clamp(32px, 4vw, 42px);
+	margin-bottom: 20px;
+	width: 100%;
+
+	span {
+		display: block;
+		font-size: 20px;
+		color: hsl(0 1% 50% / .5);
+	}
+}
+
+
+.carousel-inner {
+	/*display: flex;
+	width: 400px;
+	overflow-y: scroll;*/
+	width: 95vw;
+	height: 100dvh;
+	scrollbar-width: none;
+
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	scroll-behavior: smooth;
+	/*border: 1px solid;*/
+
+	margin: 0 auto;
+
+	place-content: center;
+	ul {
+		display: flex;
+		/*position: absolute;*/
+		gap: 4px;
+		align-items: center;
+
+		li  {
+			list-style: none;
+			scroll-snap-align: center;
+			scroll-snap-stop: always;
+			width: 400px;
+			/*border: 1px solid;*/
+
+			img {
+				display: block;
+				width: 355px;
+				height: auto;
+				border-radius: 10px;
+			}
+		}
+	}
+
+	
+
+	&::scroll-button(*) {
+		aspect-ratio: 1;
+		border-radius: 20%;
+		border: 1px solid #999;
+		top: 50%;
+		gap: 6px;
+	}
+
+	&::scroll-button(*):not(:disabled):is(:hover, :active) {
+		opacity: .8;
+	}
+
+	&::scroll-button(*):not(:disabled):active {
+		scale: 90%;
+	}
+
+	&::scroll-button(left) {
+		content: "◀" / "Scroll Left"; 
+		position: absolute;
+		left: 4px;
+	}
+
+	&::scroll-button(right) {
+		content: "▶" / "Scroll Right";
+		position: absolute;
+		right: 4px;
+	}
+
+}
+
