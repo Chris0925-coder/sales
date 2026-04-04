@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100dvh;	
+	font-family: "Helvetica Neue", system-ui, sans-serif;
+	background-color: #fafafa;
+	/*justify-content: space-between;*/
+}
+
+h1 {
+	position: relative;
+	text-align: center;
+	font-size: clamp(32px, 4vw, 42px);
+	color: #2b2b2b;
+	/*margin-top: 30px;*/
+	margin-bottom: 40px;
+	width: 90vw;
+	/*margin-bottom: 15px;*/
+	/*margin: 0 auto;*/
+	justify-self: center;
+
+	span {
+		display: block;
+		font-size: 20px;
+		margin-top: 10px;
+		color: hsl(0 1% 50% / .8);
+	}
+}
+
+button {
+	padding: 4px 8px;
+	cursor: pointer;
+	transition: all .3s ease;
+	border-radius: 5px;
+	border: none;
+	&:hover {
+		background-color: hsl(0 0% 50% / 90%);
+	}
+
+	&:active {
+		scale: .95;
+	}
+
+}
+
+.card-body {
+	display: flex;
+	margin: auto;
+	flex-grow: 1;
+	/*border:1px solid;*/
+	width: auto;
+	place-content: center;
+	margin-top: 10px;
+	background-color: #ddb500ae;
+	border-radius: 5px;
+	justify-content: center;
+	form {
+		place-content: center;
+		display: grid;
+		margin: 0 auto;
+	}
+}
+
+.form-group {
+	/*display: flex;*/
+	/*justify-content: center;*/
+	padding: 10px;
+	margin: 0 auto;
+	/*width: auto;*/
+	/*place-content: center;*/
+	/*justify-self: center;*/
+
+	input, textarea {
+		width: 250px;
+		border-radius: 5px;
+		border: none;
+		padding: 5px;
+	}
+}
+
+footer {
+	display: flex;
+	/*flex: end;*/
+	/*flex: end;*/
+	flex-grow: .5;
+	align-self: flex-end;
+	/*flex: .5;*/
+	/*justify-self: end;*/
+	/*flex-shrink: 1;*/
+	position: relative;
+	padding: 5px;
+	margin-top: 10px;
+	/*animation-fill-mode: ;*/
+	/*border: 1px solid;*/
+	justify-content: space-around;
+	align-items: center;
+	/*padding: 20px;*/
+	background-color: #2b2b2bae;
+	color: #fafafa;
+	/*address {
+		display: block;
+		border: 1px solid;
+	}*/
+}
+
+.container-iframe {
+	display: block;
+	/*margin: 10px auto;*/
+	/*width: auto;*/
+	/*border: 1px solid;*/
+	place-content: center;
+	/*justify-self: center;*/
+}
+
+/*@media (width <= 768px) {
+	footer {
+		flex-grow: 1;
+	}
+}*/

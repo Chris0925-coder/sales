@@ -56,6 +56,18 @@ h1 {
 	}
 }
 
+#page {
+	background-color: #2b2b2b;
+	text-align: right;
+	a {
+		color: #fafafa;
+		text-decoration: none;
+		&:hover {
+			color: #bbbbbb;
+		}
+	}
+}
+
 .carousel {
 	display: flex;
 	flex-direction: column;
