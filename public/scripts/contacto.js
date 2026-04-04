@@ -1,7 +1,7 @@
 const form = document.getElementById('formula');
 
 
-function form() {
+function submitForm() {
 
     form.addEventListener('submit', async function(event) {
         event.preventDefault(); 
@@ -11,7 +11,7 @@ function form() {
         if (formData.get('email').length == 0 || formData.get('control').length == 0) {
 
             document.getElementById('msg-error').innerHTML = `<span style="color:darkred;">Required fill empty field.</span>`;
-            
+
             return false;
         } 
 
@@ -39,4 +39,4 @@ function form() {
     });
 }
 
-form();
+submitForm();
