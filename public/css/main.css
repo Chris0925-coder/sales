@@ -106,7 +106,7 @@ h1 {
 	width: 400px;
 	overflow-y: scroll;*/
 	/*flex: 1;*/
-	flex-grow: 2;
+	flex-grow: .8;
 	width: 95vw;
 	/*height: auto;*/
 	/*height: calc(100% - 271px);*/
