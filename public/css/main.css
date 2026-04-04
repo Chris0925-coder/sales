@@ -208,18 +208,18 @@ footer {
 	place-content: center;
 	justify-self: center;
 }
-
+/*
 @media (width <= 768px) {
 
 	#page {
 		writing-mode: vertical-lr; 
-		border-radius: 0 0 0 5px; 
+		border-radius: 0 0 0 5px; */
     	/*text-orientation: upright;*/
 		/*transform: rotateZ(270deg);*/
 		/*right: 100%;*/
-	}
+	/*}*/
 
 	/*footer {
 		flex-grow: 1;
 	}*/
-}
+/*}*/
