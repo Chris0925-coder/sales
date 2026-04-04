@@ -9,7 +9,9 @@ function form() {
         const formData = new FormData(form);
 
         if (formData.get('email').length == 0 || formData.get('control').length == 0) {
-            document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">Field is required.</span>';
+
+            document.getElementById('msg-error').innerHTML = `<span style="color:darkred;">Required fill empty field.</span>`;
+            
             return false;
         } 
 
@@ -22,7 +24,11 @@ function form() {
           })
           .then((response) => response.text())
           .then((data) => console.log(data))
-          .catch((error) => console.error('Error:', error));
+          .catch((error) => {
+            console.error('Error:', error);
+            
+            return document.getElementById('msg-error').innerHTML = `<span style="color:darkred;">${error}</span>`;
+        });
        
 
 

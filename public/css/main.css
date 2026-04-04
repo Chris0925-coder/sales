@@ -59,6 +59,7 @@ h1 {
 #page {
 	background-color: #2b2b2b;
 	text-align: right;
+	padding: 5px 20px 5px 0;
 	a {
 		color: #fafafa;
 		text-decoration: none;
@@ -163,7 +164,7 @@ footer {
 	display: flex;
 	/*flex: end;*/
 	/*flex: end;*/
-	/*flex-grow: 1;*/
+	flex-grow: .5;
 	/*flex: .5;*/
 	justify-self: end;
 	position: relative;

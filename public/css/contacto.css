@@ -49,6 +49,19 @@ button {
 
 }
 
+#page {
+	background-color: #2b2b2b;
+	text-align: right;
+	padding: 5px 20px 5px 0;
+	a {
+		color: #fafafa;
+		text-decoration: none;
+		&:hover {
+			color: #bbbbbb;
+		}
+	}
+}
+
 .card-body {
 	display: flex;
 	margin: auto;
@@ -89,7 +102,7 @@ footer {
 	/*flex: end;*/
 	/*flex: end;*/
 	flex-grow: .5;
-	align-self: flex-end;
+	/*align-self: flex-end;*/
 	/*flex: .5;*/
 	/*justify-self: end;*/
 	/*flex-shrink: 1;*/
