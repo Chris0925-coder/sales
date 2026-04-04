@@ -1,4 +1,5 @@
 const form = document.getElementById('formula');
+const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
 
 
 function submitForm() {
