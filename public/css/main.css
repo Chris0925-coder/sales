@@ -173,11 +173,11 @@ footer {
 	display: flex;
 	/*flex: end;*/
 	/*flex: end;*/
-	flex-grow: .5;
+	flex-grow: .2;
 	/*flex: .5;*/
 	justify-self: end;
 	position: relative;
-	padding: 5px;
+	padding: 0 5px;
 	/*animation-fill-mode: ;*/
 	/*border: 1px solid;*/
 	justify-content: space-around;
@@ -200,8 +200,8 @@ footer {
 	justify-self: center;
 }
 
-@media (width <= 768px) {
+/*@media (width <= 768px) {
 	footer {
 		flex-grow: 1;
 	}
-}
+}*/

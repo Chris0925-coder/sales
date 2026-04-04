@@ -105,7 +105,7 @@ footer {
 	display: flex;
 	/*flex: end;*/
 	/*flex: end;*/
-	flex-grow: .5;
+	flex-grow: .1;
 	/*align-self: flex-end;*/
 	/*flex: .5;*/
 	/*justify-self: end;*/
