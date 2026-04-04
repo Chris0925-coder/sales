@@ -33,31 +33,37 @@
 }
 
 body {
-	font-family: "Roboto", system-ui, sans-serif;;
+	font-family: "Helvetica Neue", system-ui, sans-serif;
+	background-color: #fafafa;
 }
 
 h1 {
 	position: relative;
 	text-align: center;
 	font-size: clamp(32px, 4vw, 42px);
-	margin-top: 30px;
+	/*margin-top: 30px;*/
 	/*margin-bottom: 20px;*/
 	width: 90vw;
+	/*margin-bottom: 15px;*/
 	/*margin: 0 auto;*/
 	justify-self: center;
 
 	span {
 		display: block;
 		font-size: 20px;
+		margin-top: 10px;
 		color: hsl(0 1% 50% / .8);
 	}
 }
 
 .carousel {
+	display: flex;
+	flex-direction: column;
+	/*place-conte*/
 	/*display: flex;*/
 	/*flex-direction: column;*/
-	margin-top: 30px;
-	height: 100dvh;
+	/*margin-top: 10px;*/
+	height: 100vh;
 		/*height: calc(100dvh - 156px);*/
 	/*place-content: center;*/
 	/*overflow: hidden;*/
@@ -69,20 +75,17 @@ h1 {
 	width: 400px;
 	overflow-y: scroll;*/
 	/*flex: 1;*/
+	flex-grow: 2;
 	width: 95vw;
 	/*height: auto;*/
-	height: calc(100% - 298px);
-	
+	/*height: calc(100% - 271px);*/
 	scrollbar-width: none;
-
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	overscroll-behavior-x: contain;
 	scroll-behavior: smooth;
 	/*border: 1px solid;*/
-
 	margin: 0 auto;
-
 	place-content: center;
 	ul {
 		display: flex;
@@ -92,7 +95,6 @@ h1 {
 		align-items: center;
 		/*border: 1px solid red;*/
 		/*overflow: hidden;*/
-
 		li  {
 			list-style: none;
 			scroll-snap-align: center;
@@ -114,8 +116,6 @@ h1 {
 			}
 		}
 	}
-
-	
 
 	&::scroll-button(*) {
 		aspect-ratio: 1;
@@ -147,10 +147,39 @@ h1 {
 
 }
 
+footer {
+	display: flex;
+	/*flex: end;*/
+	/*flex: end;*/
+	/*flex-grow: 1;*/
+	/*flex: .5;*/
+	justify-self: end;
+	position: relative;
+	padding: 5px;
+	/*animation-fill-mode: ;*/
+	/*border: 1px solid;*/
+	justify-content: space-around;
+	align-items: center;
+	/*padding: 20px;*/
+	background-color: #2b2b2bae;
+	color: #fafafa;
+	/*address {
+		display: block;
+		border: 1px solid;
+	}*/
+}
+
 .container-iframe {
 	display: block;
-	margin: 10px auto;
+	/*margin: 10px auto;*/
 	width: auto;
 	/*border: 1px solid;*/
 	place-content: center;
+	justify-self: center;
+}
+
+@media (width <= 768px) {
+	footer {
+		flex-grow: 1;
+	}
 }
