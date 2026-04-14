@@ -4,21 +4,6 @@
     "name": "Apartaestudio de alquiler",
     "short_name": "Apartaestudio",
 	"icons": [
-		{
-   "src": "\/favicons/favicon-16x16.png",
-   "sizes": "16x16",
-   "type": "image\/png"	     
-    },
-  {
-   "src": "\/favicons/favicon-32x32.png",
-   "sizes": "32x32",
-   "type": "image\/png"      
-   },
-  {
-   "src": "\/favicons/favicon.ico",
-   "sizes": "48x48",
-   "type": "image\/x-icon"     
-   },
    {
    "src": "\/favicons/apple-touch-icon.png",
    "sizes": "180x180",
@@ -35,9 +20,12 @@
 	"type":"image\/png"
 	}
 	],
-	"scope":"/",
-	"start_url": "/",
-  	"background_color": "#fafafa",
-  	"display": "standalone",
-  	"theme_color": "#fafafa"
+	"id": "/", 
+    "scope":"/",
+    "start_url": "/",
+    "background_color": "#fafafa",
+    "display_override": ["fullscreen", "minimal-ui"],
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#fafafa"
 }
