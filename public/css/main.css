@@ -108,7 +108,7 @@ h1 {
 	/*flex: 1;*/
 	flex-grow: .8;
 	width: 95vw;
-	/*height: auto;*/
+	height: auto;
 	/*height: calc(100% - 271px);*/
 	scrollbar-width: none;
 	overflow-x: auto;
