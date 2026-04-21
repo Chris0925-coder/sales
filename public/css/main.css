@@ -108,7 +108,7 @@ h1 {
 	/*flex: 1;*/
 	flex-grow: .8;
 	width: 95vw;
-	height: auto;
+	height: 100%;
 	/*height: calc(100% - 271px);*/
 	scrollbar-width: none;
 	overflow-x: auto;
@@ -122,10 +122,10 @@ h1 {
 		display: flex;
 		/*position: absolute;*/
 		gap: 4px;
-		height: 100%;
+		height: 90%;
 		align-items: center;
 		/*border: 1px solid red;*/
-		overflow: hidden;
+		/*overflow: hidden;*/
 		li  {
 			list-style: none;
 			scroll-snap-align: center;
