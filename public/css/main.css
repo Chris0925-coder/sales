@@ -70,6 +70,10 @@ h1 {
 	}
 }
 
+.price {
+	text-align: center;
+}
+
 #page {
 	background-color: #2b2b2b;
 	/*text-align: right;*/
