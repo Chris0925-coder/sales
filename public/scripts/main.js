@@ -1,4 +1,10 @@
 const main = document.querySelector("body");
+const carousel = document.querySelector(".carousel-inner");
+const closeBtn = document.querySelector('.close');
+const showImages = document.getElementsByClassName('images-content');
+const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modal-content');
+
 const ahora = new Date();
 
 const opciones = {
@@ -27,9 +33,10 @@ function count() {
 
 
 
-function cli() {    
-    if(event.target.tagName === "A" || event.target.tagName === "P" || event.target.tagName === "BUTTON") {
-
+function cli(e) {
+    // console.log(e.target.tagName)
+    if(e.target.tagName === "A" || e.target.tagName === "P" || e.target.tagName === "BUTTON") {
+        console.log(e.target.tagName === "BUTTON")
         let analyticsData = {
             id: 7,
             count: 0,
@@ -40,7 +47,29 @@ function cli() {
         navigator.sendBeacon(url, JSON.stringify(analyticsData));
     }
 }
+closeBtn.addEventListener('click', () => {
+    modal.classList.toggle('show');
+})
 
+
+function images() {
+    carousel.addEventListener('click', (e) => {
+        // e.preventDefault();
+        // console.log(e.srcElement.attributes[0].nodeValue)
+
+        let element = e.srcElement.attributes[0].nodeValue;
+
+        let filename = element.split("img");
+        // console.log(filename);
+        if(e.target.tagName === 'IMG') {
+            // modalContent.innerHTML = e.srcElement.outerHTML;
+            modalContent.innerHTML =`<img src="public/img/hr${filename[1]}" alt="${filename[1]}" >`;
+            modal.classList.toggle('show');
+        }    
+    })
+}
+
+images();
 main.addEventListener('click', cli);
 
 count();

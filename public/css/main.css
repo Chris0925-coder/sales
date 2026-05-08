@@ -41,6 +41,13 @@ body {
 	font-family: "Helvetica Neue", system-ui, sans-serif;
 	background-color: #fafafa;
 }
+a {
+	color: var(--gray0);
+	transition: all .3s ease-in-out;
+	&:hover {
+		color: var(--gray70);
+	}
+}
 
 .title {
 	position: relative;
@@ -110,7 +117,7 @@ h1 {
 	width: 400px;
 	overflow-y: scroll;*/
 	/*flex: 1;*/
-	flex-grow: .8;
+	flex-grow: 2;
 	width: 95vw;
 	height: 0;
 	/*height: calc(100% - 271px);*/
@@ -122,7 +129,7 @@ h1 {
 	/*border: 1px solid;*/
 	margin: 0 auto;
 	place-content: center;
-	ul {
+	div {
 		display: flex;
 		/*position: absolute;*/
 		gap: 4px;
@@ -130,7 +137,7 @@ h1 {
 		align-items: center;
 		/*border: 1px solid red;*/
 		/*overflow: hidden;*/
-		li  {
+		picture  {
 			list-style: none;
 			scroll-snap-align: center;
 			scroll-snap-stop: always;
@@ -140,6 +147,7 @@ h1 {
 			/*border: 1px solid yellow;*/
 			border-radius: 10px;
 			background-color: #fafafa;
+			cursor: pointer;
 			/*overflow-x: hidden;*/
 
 			img {
@@ -186,11 +194,11 @@ footer {
 	display: flex;
 	/*flex: end;*/
 	/*flex: end;*/
-	flex-grow: .2;
+	/*flex-grow: .2;*/
 	/*flex: .5;*/
 	justify-self: end;
 	position: relative;
-	padding: 0 5px;
+	padding: 5px;
 	/*animation-fill-mode: ;*/
 	/*border: 1px solid;*/
 	justify-content: space-around;
@@ -212,6 +220,65 @@ footer {
 	place-content: center;
 	justify-self: center;
 }
+
+.modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        /*padding: 50px;*/
+        overflow: hidden;
+        /*background-color: rgba(240, 240, 240, 0.5);*/
+        animation: fadeIn 0.3s ease;
+    }
+
+/* Modal Content Box */
+.modal picture {
+  display: block;
+    background-color: #ffffffea;
+    /*margin: 10% auto;*/
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    height: 100vh;
+    place-content: center;
+    /*max-width: 500px;*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: slideIn 0.3s ease;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+}
+
+/* Close Button */
+.close {
+    color: #2b2b2b;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    border: 3px solid #fafafa;
+    border-radius: 50%;
+    /*margin: 30px;*/
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.close:hover {
+    color: #000;
+}
+
+.show {
+  display: block;
+}
+
 /*
 @media (width <= 768px) {
 
