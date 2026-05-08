@@ -63,7 +63,7 @@ function images() {
         // console.log(filename);
         if(e.target.tagName === 'IMG') {
             // modalContent.innerHTML = e.srcElement.outerHTML;
-            modalContent.innerHTML =`<img src="public/img/hr${filename[1]}" alt="${filename[1]}" >`;
+            modalContent.innerHTML =`<img src="public/img/hr${filename[1]}" alt="${filename[1]}" loading="lazy">`;
             modal.classList.toggle('show');
         }    
     })
