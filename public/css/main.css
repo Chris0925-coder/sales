@@ -114,6 +114,7 @@ h1 {
 	/*margin-top: 10px;*/
 	/*height: 100vh;*/
 	/*height: auto;*/
+	width: 100%;
 	height: calc(100dvh - 56px);
 	/*place-content: center;*/
 	/*place-items: center;*/
