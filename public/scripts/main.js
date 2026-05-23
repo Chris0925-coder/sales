@@ -61,9 +61,12 @@ function images() {
 
         let filename = element.split("img");
         // console.log(filename);
+        let ext = filename[1].split('.')[0];
+        // console.log(ext);
         if(e.target.tagName === 'IMG') {
+            // console.log(filename);
             // modalContent.innerHTML = e.srcElement.outerHTML;
-            modalContent.innerHTML =`<img src="public/img/hr${filename[1]}" alt="${filename[1]}" loading="lazy">`;
+            modalContent.innerHTML =`<img src="public/img/hr${ext}.jpg" alt="${ext}" loading="lazy">`;
             modal.classList.toggle('show');
         }    
     })

@@ -42,7 +42,7 @@ body {
 	background-color: #fafafa;
 }
 a {
-	color: var(--gray0);
+	color: var(--light-grey);
 	transition: all .3s ease-in-out;
 	&:hover {
 		color: var(--gray70);
@@ -69,12 +69,15 @@ h1 {
 	/*margin: 0 auto;*/
 	justify-self: center;
 
-	span {
-		display: block;
-		font-size: 20px;
-		margin-top: 5px;
-		color: hsl(0 0% 40% / 1);
-	}
+}
+
+
+.title-span {
+	display: block;
+	font-size: 20px;
+	margin-top: 5px;
+	color: hsl(0 0% 40% / 1);
+	text-align: center;
 }
 
 .price {
@@ -234,6 +237,12 @@ footer {
 	/*border: 1px solid;*/
 	place-content: center;
 	justify-self: center;
+}
+
+address img {
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
 }
 
 .modal {
