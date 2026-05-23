@@ -239,10 +239,13 @@ footer {
 	justify-self: center;
 }
 
-address img {
-	border-radius: 50%;
-	width: 20px;
-	height: 20px;
+address span {
+	display: block;
+	img {
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+	}
 }
 
 .modal {
