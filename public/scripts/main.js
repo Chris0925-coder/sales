@@ -54,16 +54,13 @@ closeBtn.addEventListener('click', () => {
 
 function images() {
     carousel.addEventListener('click', (e) => {
-        // e.preventDefault();
-        // console.log(e.srcElement.attributes[0].nodeValue)
 
-        let element = e.srcElement.attributes[0].nodeValue;
-
-        let filename = element.split("img");
-        // console.log(filename);
-        let ext = filename[1].split('.')[0];
-        // console.log(ext);
         if(e.target.tagName === 'IMG') {
+            let element = e.srcElement.attributes[0].nodeValue;
+
+            let filename = element.split("img");
+            // console.log(filename);
+            let ext = filename[1].split('.')[0];
             // console.log(filename);
             // modalContent.innerHTML = e.srcElement.outerHTML;
             modalContent.innerHTML =`<img src="public/img/hr${ext}.jpg" alt="${ext}" loading="lazy">`;
