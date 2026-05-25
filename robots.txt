@@ -5,4 +5,4 @@ Disallow: /checkout/
 Disallow: /cart/
 Allow: /
 
-Sitemap: https://apartamentodealquiler.shop/sitemap.xml
+Sitemap: https://www.apartamentodealquiler.shop/sitemap.xml
