@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /cart/
+Allow: /
+
+Sitemap: https://apartamentodealquiler.shop/sitemap.xml
