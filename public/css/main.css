@@ -42,6 +42,15 @@ body {
 	font-family: "Poppins", system-ui, sans-serif;
 	background-color: #fafafa;
 }
+
+h1,h2,h3,h4,h5,h6 {
+	color: #626262;
+	margin: 0 0 0.5rem 0;
+	padding: 10px;
+	text-align: center;
+}
+
+
 a {
 	color: var(--light-grey);
 	transition: all .3s ease-in-out;
@@ -225,7 +234,7 @@ h1 {
 	line-height: 1.4;
 	width: auto;
 	margin: 0 auto;
-	/*width: 40ch;*/
+	width: 50ch;
 	margin-block: 1lh;
 	text-wrap: wrap;
 	padding: 0 30px;
@@ -247,7 +256,7 @@ footer {
 	/*flex: end;*/
 	/*flex-grow: .2;*/
 	/*flex: .5;*/
-	justify-self: end;
+	/*justify-self: end;*/
 	position: relative;
 	padding: 5px;
 	/*animation-fill-mode: ;*/
