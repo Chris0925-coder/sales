@@ -50,6 +50,30 @@ h1,h2,h3,h4,h5,h6 {
 	text-align: center;
 }
 
+section {
+	margin: 30px auto 0 auto;
+	padding: 20px 0;
+	&:nth-child(even) {
+		/*background-color: var(--gray);*/
+		background: #000000;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		color: #fafafa;
+		h2, h3 {
+			color: #fafafa;
+		}
+
+		a {
+			color: var(--light);
+			transition: all .3s ease-in-out;
+			&:hover {
+				color: var(--gray70);
+			}
+		}
+	}
+} 
+
 
 a {
 	color: var(--light-grey);
@@ -63,7 +87,7 @@ a {
 	position: relative;
 	/*width: 200px;*/
 	width: 100%;
-	margin: 0 auto;
+	margin: 30px auto 0 auto;
 
 	/*border: 1px solid;*/
 }
@@ -71,7 +95,7 @@ a {
 h1 {
 	/*position: relative;*/
 	text-align: center;
-	font-size: clamp(32px, 4vw, 42px);
+	font-size: clamp(28px, 4vw, 42px);
 	/*margin-top: 30px;*/
 	/*margin-bottom: 20px;*/
 	width: 90vw;
@@ -143,7 +167,7 @@ h1 {
 	/*overflow: hidden;*/
 	/*border: 1px solid red;*/
 	/*justify-content: center;*/
-	margin-top: 56px;
+	margin-top: 26px;
 	/*justify-self: end;*/
 }
 
@@ -157,7 +181,7 @@ h1 {
 	width: 95vw;
 	/*height: 100vh;*/
 	/*height: calc(100% - 771px);*/
-	height: 70vh;
+	height: 50vh;
 	scrollbar-width: none;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
@@ -201,7 +225,7 @@ h1 {
 		aspect-ratio: 1;
 		border-radius: 20%;
 		border: 1px solid #999;
-		top: 70%;
+		top: 90%;
 		gap: 6px;
 		cursor: pointer;
 
@@ -264,7 +288,7 @@ footer {
 	justify-content: space-around;
 	align-items: center;
 	/*padding: 20px;*/
-	background-color: #2b2b2bae;
+	background-color: #2b2b2b99;
 	color: #fafafa;
 	/*address {
 		display: block;
@@ -352,10 +376,14 @@ address span {
   display: block;
 }
 
-/*
-@media (width <= 768px) {
 
-	#page {
+@media (width < 768px) {
+
+	.info {
+		width: 100%;
+	}
+
+	/*#page {
 		writing-mode: vertical-lr; 
 		border-radius: 0 0 0 5px; */
     	/*text-orientation: upright;*/
@@ -366,4 +394,4 @@ address span {
 	/*footer {
 		flex-grow: 1;
 	}*/
-/*}*/
+}
