@@ -1,8 +1,17 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
 Disallow: /admin/
 Disallow: /login/
 Disallow: /checkout/
 Disallow: /cart/
+Disallow: /scripts/
 Allow: /
 
 Sitemap: https://www.apartamentodealquiler.shop/sitemap.xml
