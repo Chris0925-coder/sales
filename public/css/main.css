@@ -111,8 +111,9 @@ h1 {
 	font-size: 20px;
 	/*margin-top: 5px;*/
 	color: hsl(0 0% 40% / 1);
-	text-align: center;
-	max-width: 50ch;
+	/*text-align: center;*/
+	padding: 0 10px;
+	max-width: 60ch;
 	margin: 5px auto;
 	a {
 		color: inherit;
@@ -124,6 +125,8 @@ h1 {
 
 .price {
 	text-align: center;
+	color: #1b1b1b;
+	margin: 5px auto;
 }
 
 #page {
@@ -253,8 +256,14 @@ h1 {
 
 }
 
+.carousel-text {
+	padding: 20px; 
+	max-width: 75ch;
+	margin: 0 auto;
+}
+
 .info {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	line-height: 1.4;
 	width: auto;
 	margin: 0 auto;
@@ -262,8 +271,11 @@ h1 {
 	margin-block: 1lh;
 	text-wrap: wrap;
 	padding: 0 30px;
-	span {
-		font-weight: 900;
+	h4 {
+		display: inline-block;
+		text-align: left;
+		color: inherit;
+		margin-bottom: 0;
 	}
 
 	a {
@@ -309,8 +321,18 @@ footer {
 	cursor: pointer;
 }
 
-address span {
-	display: block;
+.footer-contacto {
+	h5 {
+		color: inherit;
+		margin-bottom: 5px;
+		text-align: left;
+		padding: 0;
+	}
+	span {
+		display: block;
+		font-size: .7rem;
+		margin: 5px;
+	}
 	img {
 		border-radius: 50%;
 		width: 20px;
