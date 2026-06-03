@@ -138,19 +138,16 @@ h1 {
 	top: 0;
 	z-index: 6000;
 	border-radius: 0 0 0 5px; 
-	opacity: 0.4;
 	transition: .3s ease-in-out;
+
 	a {
 		color: #fafafa;
 		text-decoration: none;
 		&:hover {
 			color: #bbbbbb;
-
 		}
 	}
-	&:hover {
-		opacity: .9;
-	}
+
 }
 
 .carousel {
@@ -249,14 +246,14 @@ h1 {
 		content: "◀" / "Scroll Left"; 
 		position: absolute;
 		left: 4px;
-		top: 50%;
+		top: 70%;
 			}
 
 	&::scroll-button(right) {
 		content: "▶" / "Scroll Right";
 		position: absolute;
 		right: 4px;
-		top: 50%;
+		top: 70%;
 
 	}
 
