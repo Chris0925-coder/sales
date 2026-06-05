@@ -36,7 +36,7 @@ function count() {
 function cli(e) {
     // console.log(e.target.tagName)
     if(e.target.tagName === "A" || e.target.tagName === "P" || e.target.tagName === "BUTTON") {
-        console.log(e.target.tagName === "BUTTON")
+
         let analyticsData = {
             id: 7,
             count: 0,
@@ -61,7 +61,7 @@ function images() {
             let filename = element.split("img");
             // console.log(filename);
             let ext = filename[1].split('.')[0];
-            // console.log(filename);
+            // console.log(ext[0],ext[1]);
             // modalContent.innerHTML = e.srcElement.outerHTML;
             modalContent.innerHTML =`<img src="public/img/hr${ext}.jpg" alt="${ext}" loading="lazy">`;
             modal.classList.toggle('show');
