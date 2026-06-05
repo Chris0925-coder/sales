@@ -5,40 +5,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contacto | Apartaestudio de alquiler</title>
 
-	<link rel="stylesheet" type="text/css" href="public/css/contacto.css">
+	<link rel="stylesheet" type="text/css" href="../public/css/contacto.css">
 
-	<script type="text/javascript" src="public/scripts/contacto.js" defer></script>
+	<script type="text/javascript" src="../public/scripts/contacto.js" defer></script>
 
-	<meta name="title" content="Formulario | Apartamento de alquiler">
+	<meta name="title" content="Formulario web | Apartamento de alquiler">
 	<meta name="description" content="Formulario, deja un mensaje, o escribe al whatsapp: 6130-0330.">
 	<meta name="keywords" content="Formulario, Contacto, 6130-0330, Panamá, San Miguelito">
 </head>
 <body>
-	<div id="page">
-		<a href="index.html" title="Inico">Inicio</a>
-	</div>
+	<header>
+		<ul id="page">
+			<li><a href="../index.html" title="ir a inicio">Inicio</a></li>
+			<li><a href="video.html" title="ir a video">Video</a></li>
+		</ul>
+	</header>
+	<main>
 
-	<div class="card-body">
-		<form id="formula">
-			<h1>Contacto</h1>
-			<div class="form-group">
-				<input type="email" name="email" class="form-control" placeholder="Email">
-			</div>
-		    <br>
-			<div class="form-group">
-				<textarea class="form-control" name="control" placeholder="Comentarios" cols="30" rows="10"></textarea>
-			</div>
-			<br>
-			<div class="form-group">
-				<button title="Enviar" type="submit" class="btn btn-primary btn-block" id="demo-form">
-					Enviar
-				</button>
-			</div>
+		<h1>Formulario web, deja un mensaje | Whatsapp: 6130-0330</h1>
 
-			<span id="msg-error"></span>
-		</form>
-	</div>
+		<div class="card-body">
+			<form id="formula">
+				<h2>Contacto</h2>
+				<div class="form-group">
+					<input type="email" name="email" class="form-control" placeholder="Email">
+				</div>
+			    <br>
+				<div class="form-group">
+					<textarea class="form-control" name="control" placeholder="Comentarios" cols="30" rows="10"></textarea>
+				</div>
+				<br>
+				<div class="form-group">
+					<button title="Enviar" type="submit" class="btn btn-primary btn-block" id="demo-form">
+						Enviar
+					</button>
+				</div>
 
+				<span id="msg-error"></span>
+			</form>
+		</div>
+	</main>
 	<footer>
 		<address>
 			<p>Teléfono: <a href="https://wa.me/50761300330?text=Hola%20estoy%20interesado%20y%20deseo%20más%20información.">6130-0330</a></p>
