@@ -109,6 +109,7 @@ h1 {
 .title-span {
 	display: block;
 	font-size: 20px;
+	width: fit-content;
 	/*margin-top: 5px;*/
 	color: hsl(0 0% 40% / 1);
 	/*text-align: center;*/
@@ -130,6 +131,7 @@ h1 {
 }
 
 #page {
+	display: flex;
 	background-color: #2b2b2b;
 	/*text-align: right;*/
 	padding: 7px 14px;
@@ -140,6 +142,11 @@ h1 {
 	border-radius: 0 0 0 5px; 
 	transition: .3s ease-in-out;
 	list-style: none;
+	gap: .3em;
+	li {
+		border-bottom: 1px solid #ababab;
+		padding: 4px 7px;
+	}
 
 	a {
 		color: #fafafa;
