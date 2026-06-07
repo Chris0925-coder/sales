@@ -15,4 +15,5 @@ Disallow: /scripts/
 Allow: /
 
 Sitemap: https://www.apartamentodealquiler.shop/sitemap.xml
+Sitemap: https://www.apartamentodealquiler.shop/image-sitemap.xml
 Sitemap: https://www.apartamentodealquiler.shop/video_sitemap.xml
