@@ -351,7 +351,7 @@ footer {
 	justify-self: center;
 	width: 180px;
 	height: 90px;
-	background: url('../img/gmap.avif') center / cover no-repeat;
+	background: url('../img/ubicacion_en_google_map.avif') center / cover no-repeat;
 	cursor: pointer;
 }
 
