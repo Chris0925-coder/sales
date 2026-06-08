@@ -92,20 +92,6 @@ a {
 	/*border: 1px solid;*/
 }
 
-h1 {
-	/*position: relative;*/
-	text-align: center;
-	font-size: clamp(28px, 4vw, 42px);
-	/*margin-top: 30px;*/
-	/*margin-bottom: 20px;*/
-	width: 90vw;
-	/*margin-bottom: 15px;*/
-	/*margin: 0 auto;*/
-	justify-self: center;
-
-}
-
-
 .title-span {
 	display: block;
 	font-size: 20px;
@@ -305,9 +291,9 @@ h1 {
 	margin-block: 1lh;
 	text-wrap: wrap;
 	padding: 0 30px;
-	h3 {
-		display: inline-block;
-		text-align: left;
+	strong {
+		/*display: inline-block;*/
+		/*text-align: left;*/
 		color: inherit;
 		margin-bottom: 0;
 	}
