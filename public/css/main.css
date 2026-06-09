@@ -306,6 +306,18 @@ nav {
 	margin: 5px auto;
 }
 
+.text {
+	display: block;
+	/*font-size: 20px;*/
+	width: fit-content;
+	/*margin-top: 5px;*/
+	color: #fafafa;
+	/*text-align: center;*/
+	padding: 0 10px;
+	max-width: 60ch;
+	margin: 5px auto;
+}
+
 #btn-video {
 	display: block;
 	margin: auto;
