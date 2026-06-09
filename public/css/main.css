@@ -194,7 +194,9 @@ nav {
 	/*overflow: hidden;*/
 	/*border: 1px solid red;*/
 	/*justify-content: center;*/
-	margin-top: 26px;
+	/*margin-top: 26px;*/
+	margin: 0;
+	padding: 0;
 	/*justify-self: end;*/
 }
 
@@ -209,7 +211,7 @@ nav {
 	width: 95vw;
 	/*height: 100vh;*/
 	/*height: calc(100% - 771px);*/
-	height: 600px;
+	height: 450px;
 	/*height: 350px;*/
 	scrollbar-width: none;
 	overflow-x: auto;
