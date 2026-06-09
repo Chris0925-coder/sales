@@ -52,7 +52,7 @@ h1,h2,h3,h4,h5,h6 {
 
 section {
 	margin: 30px auto 0 auto;
-	padding: 20px 0;
+	padding: 40px 0;
 	&:nth-child(even) {
 		/*background-color: var(--gray);*/
 		background: #000000;  /* fallback for old browsers */
@@ -83,18 +83,45 @@ a {
 	}
 }
 
+p {
+	margin-block: 1lh;
+    text-align: justify;
+    /*text-wrap: balance;*/
+    hyphenate-limit-chars: 7;
+    hyphens: auto;
+}
+
+nav {
+	display: flex;
+	/*border: 1px solid yellow;*/
+	max-width: 1200px;
+	padding: 10px 40px;
+	justify-content: space-between;
+	align-items: center;
+	background: #fafafa;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.logo {
+	display: block;
+	background: url('../../favicons/android-chrome-192x192.png')center / contain no-repeat;
+	width: 70px;
+	height: 70px;
+	/*border: 1px solid red;*/
+}
+
 .title {
 	position: relative;
 	/*width: 200px;*/
 	width: 100%;
-	margin: 45px auto 0 auto;
+	margin: 0 auto;
 
 	/*border: 1px solid;*/
 }
 
 .title-span {
 	display: block;
-	font-size: 20px;
+	/*font-size: 20px;*/
 	width: fit-content;
 	/*margin-top: 5px;*/
 	color: hsl(0 0% 40% / 1);
@@ -112,8 +139,10 @@ a {
 
 .price {
 	text-align: center;
-	color: #1b1b1b;
+	/*color: #1b1b1b;*/
 	margin: 5px auto;
+	color: hsl(0 0% 40% / 1);
+	max-width: 65ch;
 }
 
 #page {
@@ -121,17 +150,20 @@ a {
 	background-color: #2b2b2b;
 	/*text-align: right;*/
 	padding: 7px 14px;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 6000;
-	border-radius: 0 0 0 5px; 
+	position: relative;
+	/*align-items: center;*/
+	/*right: 0;*/
+	/*top: 0;*/
+	/*z-index: 6000;*/
+	border-radius: 5px; 
 	transition: .3s ease-in-out;
 	list-style: none;
 	gap: .3em;
+	height: fit-content;
 	li {
 		border-bottom: 1px solid #ababab;
 		padding: 4px 7px;
+		height: auto;
 	}
 
 	a {
@@ -147,6 +179,7 @@ a {
 .carousel {
 	display: flex;
 	flex-direction: column;
+	position: relative;
 	/*place-conte*/
 	/*display: flex;*/
 	/*flex-direction: column;*/
@@ -172,11 +205,11 @@ a {
 	/*flex: 1;*/
 	display: block;
 	position: relative;
-	flex-grow: 2;
+	/*flex-grow: 2;*/
 	width: 95vw;
 	/*height: 100vh;*/
 	/*height: calc(100% - 771px);*/
-	height: 50vh;
+	height: 600px;
 	/*height: 350px;*/
 	scrollbar-width: none;
 	overflow-x: auto;
@@ -186,9 +219,10 @@ a {
 	/*border: 1px solid;*/
 	margin: 0 auto;
 	place-content: center;
+	/*padding: 40px 10px;*/
 	div {
 		display: flex;
-		/*position: absolute;*/
+		/*position: relative;*/
 		gap: 4px;
 		height: 90%;
 		align-items: center;
@@ -196,6 +230,7 @@ a {
 		/*overflow: hidden;*/
 		picture  {
 			list-style: none;
+			/*position: relative;*/
 			scroll-snap-align: center;
 			scroll-snap-stop: always;
 			width: 400px;
@@ -203,12 +238,14 @@ a {
 			height: 100%;
 			/*border: 1px solid yellow;*/
 			border-radius: 10px;
-			background-color: #8b8b8b0e;
+			/*background-color: #8b8b8b0e;*/
+			background-color: #fafafaa4;
 			cursor: pointer;
 			/*overflow-x: hidden;*/
 
 			img {
 				display: block;
+				/*position: relative;*/
 				width: 355px;
 				height: 100%;
 				/*border-radius: 10px;*/
@@ -218,14 +255,14 @@ a {
 	}
 
 	&::scroll-button(*) {
-		position: relative;
+		/*position: relative;*/
 		aspect-ratio: 1;
 		border-radius: 20%;
 		border: 1px solid #999;
 		/*top: 80%;*/
 		gap: 6px;
 		cursor: pointer;
-
+		/*bottom: 0;*/
 	}
 
 	&::scroll-button(*):not(:disabled):is(:hover, :active) {
@@ -240,23 +277,33 @@ a {
 		content: "◀" / "Scroll Left"; 
 		position: absolute;
 		left: 4px;
-		top: 70%;
-			}
+		top: 65%;
+	}
 
 	&::scroll-button(right) {
 		content: "▶" / "Scroll Right";
 		position: absolute;
 		right: 4px;
-		top: 70%;
+		top: 65%;
 
 	}
 
 }
 
 .carousel-text {
-	padding: 20px; 
-	max-width: 75ch;
-	margin: 0 auto;
+	/*padding: 20px; */
+	/*max-width: 75ch;*/
+	/*max-width: 60ch;*/
+	/*margin: 0 auto;*/
+	display: block;
+	/*font-size: 20px;*/
+	width: fit-content;
+	/*margin-top: 5px;*/
+	color: hsl(0 0% 40% / 1);
+	/*text-align: center;*/
+	padding: 0 10px;
+	max-width: 60ch;
+	margin: 5px auto;
 }
 
 #btn-video {
@@ -423,6 +470,14 @@ footer {
 
 	.info {
 		width: 100%;
+	}
+
+	#page {
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 6000;
+		/*width: 100%;*/
 	}
 
 }
