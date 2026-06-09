@@ -279,14 +279,14 @@ nav {
 		content: "◀" / "Scroll Left"; 
 		position: absolute;
 		left: 4px;
-		top: 65%;
+		top: 50%;
 	}
 
 	&::scroll-button(right) {
 		content: "▶" / "Scroll Right";
 		position: absolute;
 		right: 4px;
-		top: 65%;
+		top: 50%;
 
 	}
 
