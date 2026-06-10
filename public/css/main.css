@@ -43,6 +43,12 @@ body {
 	background-color: #fafafa;
 }
 
+main,header, footer {
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	color: #626262;
 	margin: 0 0 0.5rem 0;
@@ -53,6 +59,7 @@ h1,h2,h3,h4,h5,h6 {
 section {
 	margin: 30px auto 0 auto;
 	padding: 40px 0;
+
 	&:nth-child(even) {
 		/*background-color: var(--gray);*/
 		background: #000000;  /* fallback for old browsers */
@@ -142,7 +149,7 @@ nav {
 	/*color: #1b1b1b;*/
 	margin: 5px auto;
 	color: hsl(0 0% 40% / 1);
-	max-width: 65ch;
+	max-width: 40ch;
 }
 
 #page {
@@ -292,6 +299,28 @@ nav {
 
 }
 
+.content {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 30px auto;
+	/*border: 1px solid;*/
+	article {
+		display: flex;
+		flex-direction: column;
+		/*display: block;*/
+		/*position: relative;*/
+		/*border: 1px solid;*/
+		/*justify-content: space-evenly;*/
+		/*align-items: flex-end;*/
+		height: 255px;
+		align-items: center;
+		margin: 0 auto;
+	
+	}
+}
+
 .carousel-text {
 	/*padding: 20px; */
 	/*max-width: 75ch;*/
@@ -304,7 +333,7 @@ nav {
 	color: hsl(0 0% 40% / 1);
 	/*text-align: center;*/
 	padding: 0 10px;
-	max-width: 60ch;
+	max-width: 55ch;
 	margin: 5px auto;
 }
 
@@ -315,8 +344,8 @@ nav {
 	/*margin-top: 5px;*/
 	color: #fafafa;
 	/*text-align: center;*/
-	padding: 0 10px;
-	max-width: 60ch;
+	padding: 0 20px;
+	max-width: 80ch;
 	margin: 5px auto;
 }
 
@@ -481,6 +510,7 @@ footer {
 
 
 @media (width < 768px) {
+
 
 	.info {
 		width: 100%;
