@@ -37,16 +37,27 @@ html {
 }
 
 body {
-	/*position: relative;*/
-	/*font-family: "Helvetica Neue", system-ui, sans-serif;*/
-	font-family: "Poppins", system-ui, sans-serif;
+	display: flex;
+	flex-direction: column;
+	font-family:'Plus Jakarta Sans', "Poppins", system-ui, sans-serif;
 	background-color: #fafafa;
+	/*border: 1px solid red;*/
+	min-height: 100dvh;
+	align-self: center;
 }
 
 main,header, footer {
 	max-width: 1200px;
 	margin: 0 auto;
 	overflow: hidden;
+}
+
+header {
+	flex-grow: 1;
+}
+
+main {
+	flex-grow: 2;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -402,11 +413,13 @@ footer {
 	display: flex;
 	/*flex: end;*/
 	/*flex: end;*/
-	/*flex-grow: .2;*/
+	flex-grow: 1;
 	/*flex: .5;*/
-	/*justify-self: end;*/
-	position: relative;
+	/*justify-self: flex-end;*/
+	/*position: relative;*/
 	padding: 5px;
+	width: 100vw;
+	max-width: 1200px;
 	/*animation-fill-mode: ;*/
 	/*border: 1px solid;*/
 	justify-content: space-around;
@@ -414,6 +427,7 @@ footer {
 	/*padding: 20px;*/
 	background-color: #1b1b1be9;
 	color: #fafafa;
+	margin: 0 auto;
 	/*address {
 		display: block;
 		border: 1px solid;
@@ -467,7 +481,7 @@ footer {
     }
 
 /* Modal Content Box */
-.modal picture {
+.modal div {
   display: block;
     background-color: #ffffffea;
     /*margin: 10% auto;*/
@@ -513,7 +527,7 @@ footer {
 
 @media (width < 768px) {
 
-
+	
 	.info {
 		width: 100%;
 	}
