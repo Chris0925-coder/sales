@@ -353,10 +353,10 @@ nav {
 
 #btn-video {
 	display: block;
-	margin: auto;
+	margin: 12px auto;
 	border-radius: 10px;
 	border: none;
-	padding: 7px 14px;
+	padding: 12px 18px;
 	transition: all .3s ease-in-out;
 	font-weight: 800;
 
