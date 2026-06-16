@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://www.apartamentodealquiler.shop/pages/video</loc>
     <video:video>
       <video:thumbnail_loc>https://www.apartamentodealquiler.shop/public/img/hr/banner_apartamento_en_alquiler.jpg</video:thumbnail_loc>
-      <video:title>Apartaestudio de alquiler</video:title>
-      <video:description>Se alquila apartaestudio para pareja o estudiante en Villas de San José, ciudad de Panamá, B/. 350.00 mensual.</video:description>
-      <video:player_loc>https://youtu.be/T14bgExyr6Q?si=oU_7pUlbC9OBuyMb</video:player_loc>
+      <video:title>Apartaestudio de alquiler en San Miguelito, Panamá — B/.350 mensuales</video:title>
+      <video:description>Se alquila apartaestudio para pareja o estudiante en Villas de San José, ciudad de Panamá. B/. 350.00 mensual. Sin intermediarios, cerca de Andes Mall.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/T14bgExyr6Q</video:player_loc>
+      <video:duration>48</video:duration>
+      <video:upload_date>2026-06-15</video:upload_date>
+      <video:expiration_date>2027-06-15</video:expiration_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
     </video:video>
   </url>
 </urlset>
