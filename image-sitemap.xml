@@ -3,21 +3,26 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.apartamentodealquiler.shop/</loc>
+    <lastmod>2026-07-16</lastmod>
     <image:image>
       <image:loc>https://www.apartamentodealquiler.shop/public/img/hr/alquiler_apartaestudio_350_mensuales.jpg</image:loc>
-      <image:title>Apartamento tipo estudio disponible en Villas de San José San Miguelito Panamá</image:title>
+      <image:title>Apartamento tipo estudio disponible en Villas de San José, San Miguelito, Panamá</image:title>
+      <image:caption>Apartaestudio en alquiler por $350 mensuales en Villas de San José, San Miguelito, Panamá.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.apartamentodealquiler.shop/public/img/hr/banner_apartamento_en_alquiler.jpg</image:loc>
-      <image:title>Anuncio de apartaestudio en alquiler en San Miguelito Panamá</image:title>
+      <image:title>Anuncio de apartaestudio en alquiler en San Miguelito, Panamá</image:title>
+      <image:caption>Banner de apartaestudio económico disponible para alquiler en San Miguelito, Panamá.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.apartamentodealquiler.shop/public/img/hr/alquiler_apartaestudio_economico_en_panama.jpg</image:loc>
-      <image:title>Apartaestudio en Panamá</image:title>
+      <image:title>Apartaestudio económico en alquiler en San Miguelito, Panamá</image:title>
+      <image:caption>Apartaestudio económico disponible en Villas de San José, San Miguelito, Panamá.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.apartamentodealquiler.shop/public/img/hr/apartamento_en_alquiler_350_mensuales_villas_de_san_jose.jpg</image:loc>
-      <image:title>Apartaestudio económico en alquiler Villas de San José San Miguelito Panamá</image:title>
+      <image:title>Apartaestudio económico en alquiler en Villas de San José, San Miguelito, Panamá</image:title>
+      <image:caption>Apartaestudio en Villas de San José con precio de $350 mensuales, San Miguelito, Panamá.</image:caption>
     </image:image>
   </url>
 </urlset>
