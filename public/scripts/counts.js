@@ -11,15 +11,13 @@ const opciones = {
   const formatoConZona = new Intl.DateTimeFormat("es-PA", opciones).format(ahora);
   
 const url = `https://visits-christian-guardias-projects.vercel.app/count`;    
-const dominio = window.location.pathname;
-
-let dom = dominio.split('/');
+const dominio = window.location.origin;
 
 function count() {
     let analyticsData = {
-        id: 8,
+        id: 7,
         count: 1,
-        domain: dom[2],
+        domain: dominio,
         date: `última vista: ${formatoConZona}`,
         clicks: 0,
     };
@@ -28,12 +26,12 @@ function count() {
 };
 
 
-
-function cli() {    
-    if(event.target.tagName === "A" || event.target.tagName === "BUTTON") {
+function cli(e) {
+    // console.log(e.target.tagName)
+    if(e.target.tagName === "A" || e.target.tagName === "P" || e.target.tagName === "BUTTON") {
 
         let analyticsData = {
-            id: 8,
+            id: 7,
             count: 0,
             domain: dominio,
             date: `última vista: ${formatoConZona}`,
@@ -44,5 +42,6 @@ function cli() {
 }
 
 main.addEventListener('click', cli);
+
 
 count();
