@@ -139,6 +139,21 @@ nav {
 	/*border: 1px solid;*/
 }
 
+.title-header {
+	display: flex;	
+	align-items: baseline;
+	margin: 30px auto;
+
+	h1 {
+		text-align: left;
+
+	}
+
+	p {
+		align-items: baseline;
+	}
+}
+
 .title-span {
 	display: block;
 	/*font-size: 20px;*/
@@ -387,7 +402,6 @@ nav {
 }
 
 .info {
-	font-size: 1rem;
 	line-height: 1.5;
 	width: auto;
 	margin: 0 auto;
@@ -395,6 +409,10 @@ nav {
 	margin-block: 1lh;
 	text-wrap: wrap;
 	padding: 0 30px;
+	h4 {
+		color: #fafafa;
+		text-align: initial;
+	}
 	strong {
 		/*display: inline-block;*/
 		/*text-align: left;*/
@@ -528,6 +546,10 @@ footer {
 
 @media (width < 768px) {
 
+	.title-header {
+		display: block;
+			width: 80vw;
+	}
 	
 	.info {
 		width: 100%;
