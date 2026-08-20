@@ -46,9 +46,9 @@
       <video:title>Recorrido virtual — Apartaestudio en alquiler en San Miguelito, Panamá</video:title>
       <video:description>Video tour del apartaestudio en alquiler ubicado en Villas de San José, San Miguelito, Ciudad de Panamá. Un dormitorio, un baño.</video:description>
       <video:player_loc>https://www.youtube.com/embed/T14bgExyr6Q</video:player_loc>
-      <video:publication_date>2026-07-16</video:publication_date>
+      <video:publication_date>2026-07-16T08:00:00-05:00</video:publication_date>
       <video:uploader info="https://www.apartamentodealquiler.shop/">Apartaestudio en Alquiler Panamá</video:uploader>
-      <video:duration>47</video:duration>
+      <video:duration>48</video:duration>
       <video:requires_subscription>no</video:requires_subscription>
       <video:live>no</video:live>
     </video:video>
