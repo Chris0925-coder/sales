@@ -12,12 +12,12 @@
       href="https://www.apartamentodealquiler.shop/public/css/main.css"
     />
 
-    <script type="application/ld+json" data-cfasync="false">
+   <!-- <script type="application/ld+json" data-cfasync="false">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": ["Apartment", "Product"],
+            "@type": ["Apartment"],
             "@id": "https://www.apartamentodealquiler.shop/#apartment",
             "name": "Apartaestudio en alquiler en San Miguelito, Panamá — B/.350/mes",
             "description": "Alquila un apartaestudio económico en Villas de San José, San Miguelito. Baño privado, planta alta, cerca de Andes Mall. Ideal para estudiantes o parejas. Sin intermediarios. Contáctanos hoy.",
@@ -72,23 +72,7 @@
                 "name": "Planta alta",
                 "value": true
               }
-            ],
-            "offers": {
-              "@type": "Offer",
-              "name": "Alquiler mensual apartaestudio",
-              "price": 350,
-              "priceCurrency": "USD",
-              "priceSpecification": {
-                "@type": "UnitPriceSpecification",
-                "price": 350,
-                "priceCurrency": "USD",
-                "unitCode": "MON",
-                "unitText": "mes"
-              },
-              "availability": "https://schema.org/InStock",
-              "url": "https://www.apartamentodealquiler.shop/",
-              "seller": { "@id": "https://www.apartamentodealquiler.shop/#owner" }
-            }
+            ]
           },
           {
             "@type":"ItemList",
@@ -211,6 +195,7 @@
             "@id": "https://www.apartamentodealquiler.shop/#video-page",
             "url": "https://www.apartamentodealquiler.shop/pages/video.html",
             "name": "Recorrido visual | Apartaestudio en alquiler en San Miguelito, Panamá | B/.350/mes",
+            "video": { "@id": "https://www.apartamentodealquiler.shop/pages/video.html#video" },
             "breadcrumb": {
               "@type": "BreadcrumbList",
               "itemListElement": [
@@ -233,7 +218,237 @@
           }
         ]
       }
+    </script> -->
+
+    <script type="application/ld+json" data-cfasync="false">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Product",
+          "@id": "https://www.apartamentodealquiler.shop/#listing",
+          "name": "Apartaestudio en alquiler en San Miguelito, Panamá — B/.350/mes",
+          "description": "Alquila un apartaestudio económico en Villas de San José, San Miguelito. Baño privado, planta alta, cerca de Andes Mall. Ideal para estudiantes o parejas. Sin intermediarios. Contáctanos hoy.",
+          "identifier": {
+            "@type": "PropertyValue",
+            "name": "ID de propiedad",
+            "value": "APT-VSJ-2026-001"
+          },
+          "image": [
+            { "@id": "https://www.apartamentodealquiler.shop/#img1" },
+            { "@id": "https://www.apartamentodealquiler.shop/#img2" },
+            { "@id": "https://www.apartamentodealquiler.shop/#img3" }
+          ],
+          "offers": {
+            "@type": "Offer",
+            "@id": "https://www.apartamentodealquiler.shop/#offer",
+            "name": "Alquiler mensual apartaestudio",
+            "price": 350,
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": 350,
+              "priceCurrency": "USD",
+              "unitCode": "MON",
+              "unitText": "mes"
+            },
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.apartamentodealquiler.shop/",
+            "seller": { "@id": "https://www.apartamentodealquiler.shop/#owner" }
+          }
+        },
+        {
+          "@type": "Apartment",
+          "@id": "https://www.apartamentodealquiler.shop/#apartment",
+          "name": "Apartaestudio en alquiler en San Miguelito, Panamá — B/.350/mes",
+          "description": "Alquila un apartaestudio económico en Villas de San José, San Miguelito. Baño privado, planta alta, cerca de Andes Mall. Ideal para estudiantes o parejas. Sin intermediarios. Contáctanos hoy.",
+          "mainEntity": { "@id": "https://www.apartamentodealquiler.shop/#listing" },
+          "numberOfRooms": 1,
+          "numberOfBedrooms": 1,
+          "numberOfBathroomsTotal": 1,
+          "telephone": "+507-6130-0330",
+          "petsAllowed": true,
+          "smokingAllowed": false,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Villas de San José, San Miguelito",
+            "addressLocality": "Ciudad de Panamá",
+            "addressRegion": "Panamá",
+            "addressCountry": "PA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 9.05106,
+            "longitude": -79.50459
+          },
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 45,
+            "unitCode": "MTK"
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Baño privado",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Planta alta",
+              "value": true
+            }
+          ],
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Piso",
+              "value": 1
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Duración mínima de contrato",
+              "value": "1 mes"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://www.apartamentodealquiler.shop/#sitelist",
+          "name": "Páginas del sitio — Apartaestudio en alquiler",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://www.apartamentodealquiler.shop/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://www.apartamentodealquiler.shop/pages/video.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://www.apartamentodealquiler.shop/pages/contacto.html"
+            }
+          ]
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.apartamentodealquiler.shop/#img1",
+          "url": "https://www.apartamentodealquiler.shop/public/img/hr/banner_apartamento_en_alquiler.jpg",
+          "contentUrl": "https://www.apartamentodealquiler.shop/public/img/hr/banner_apartamento_en_alquiler.jpg",
+          "width": 1200,
+          "height": 600,
+          "caption": "Apartaestudio en alquiler en San Miguelito, Panamá",
+          "creditText": "ch30",
+          "creator": { "@id": "https://www.apartamentodealquiler.shop/#owner" },
+          "copyrightNotice": "© 2026 Apartaestudio en Alquiler. Todos los derechos reservados.",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "acquireLicensePage": "https://www.apartamentodealquiler.shop/pages/contacto.html"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.apartamentodealquiler.shop/#img2",
+          "url": "https://www.apartamentodealquiler.shop/public/img/hr/alquiler_apartaestudio_350_mensuales.jpg",
+          "contentUrl": "https://www.apartamentodealquiler.shop/public/img/hr/alquiler_apartaestudio_350_mensuales.jpg",
+          "width": 1200,
+          "height": 600,
+          "caption": "Apartaestudio en alquiler a B/.350 mensuales",
+          "creditText": "ch30",
+          "creator": { "@id": "https://www.apartamentodealquiler.shop/#owner" },
+          "copyrightNotice": "© 2026 Apartaestudio en Alquiler. Todos los derechos reservados.",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "acquireLicensePage": "https://www.apartamentodealquiler.shop/pages/contacto.html"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.apartamentodealquiler.shop/#img3",
+          "url": "https://www.apartamentodealquiler.shop/public/img/hr/alquiler_apartaestudio_economico_en_panama.jpg",
+          "contentUrl": "https://www.apartamentodealquiler.shop/public/img/hr/alquiler_apartaestudio_economico_en_panama.jpg",
+          "width": 1200,
+          "height": 600,
+          "caption": "Apartaestudio económico en alquiler en Panamá",
+          "creditText": "ch30",
+          "creator": { "@id": "https://www.apartamentodealquiler.shop/#owner" },
+          "copyrightNotice": "© 2026 Apartaestudio en Alquiler. Todos los derechos reservados.",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "acquireLicensePage": "https://www.apartamentodealquiler.shop/pages/contacto.html"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.apartamentodealquiler.shop/#website",
+          "url": "https://www.apartamentodealquiler.shop/",
+          "name": "Apartamento de Alquiler en Panamá",
+          "inLanguage": "es",
+          "publisher": { "@id": "https://www.apartamentodealquiler.shop/#owner" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.apartamentodealquiler.shop/#webpage",
+          "url": "https://www.apartamentodealquiler.shop/",
+          "name": "Apartaestudio en alquiler en San Miguelito, Panamá | B/.350/mes",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.apartamentodealquiler.shop/" }
+            ]
+          },
+          "isPartOf": { "@id": "https://www.apartamentodealquiler.shop/#website" },
+          "primaryImageOfPage": { "@id": "https://www.apartamentodealquiler.shop/#img1" },
+          "inLanguage": "es",
+          "datePublished": "2026-06-15T00:00:00-05:00",
+          "dateModified": "2026-07-18T00:30:00-05:00",
+          "about": { "@id": "https://www.apartamentodealquiler.shop/#apartment" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.apartamentodealquiler.shop/#contacto",
+          "url": "https://www.apartamentodealquiler.shop/pages/contacto.html",
+          "name": "Contacto | Apartaestudio en alquiler en San Miguelito, Panamá | B/.350/mes",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.apartamentodealquiler.shop/" },
+              { "@type": "ListItem", "position": 2, "name": "Contacto", "item": "https://www.apartamentodealquiler.shop/pages/contacto.html" }
+            ]
+          },
+          "isPartOf": { "@id": "https://www.apartamentodealquiler.shop/#website" },
+          "inLanguage": "es",
+          "datePublished": "2026-06-15T00:00:00-05:00",
+          "dateModified": "2026-07-18T01:30:00-05:00",
+          "about": { "@id": "https://www.apartamentodealquiler.shop/#apartment" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.apartamentodealquiler.shop/#video-page",
+          "url": "https://www.apartamentodealquiler.shop/pages/video.html",
+          "name": "Recorrido virtual | Apartaestudio en alquiler en San Miguelito, Panamá | B/.350/mes",
+          "video": { "@id": "https://www.apartamentodealquiler.shop/pages/video.html#video" },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.apartamentodealquiler.shop/" },
+              { "@type": "ListItem", "position": 2, "name": "Video", "item": "https://www.apartamentodealquiler.shop/pages/video.html" }
+            ]
+          },
+          "isPartOf": { "@id": "https://www.apartamentodealquiler.shop/#website" },
+          "inLanguage": "es",
+          "datePublished": "2026-06-15T00:00:00-05:00",
+          "dateModified": "2026-07-18T01:30:00-05:00",
+          "about": { "@id": "https://www.apartamentodealquiler.shop/#apartment" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.apartamentodealquiler.shop/#owner",
+          "name": "Elma J. C.",
+          "telephone": "+507-6130-0330",
+          "url": "https://www.apartamentodealquiler.shop/pages/contacto.html"
+        }
+      ]
+    }
     </script>
+
 
     <link rel="stylesheet" type="text/css" href="./public/css/main.css" />
 
