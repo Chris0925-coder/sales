@@ -1,6 +1,19 @@
 const form = document.getElementById('formula');
 const url = `https://visits-christian-guardias-projects.vercel.app/form/apartaestudio`;
 const btn = document.getElementById("demo-form");
+
+const opciones = {
+  timeZone: "America/Panama",
+  year: "numeric",
+  weekday: "short",
+  day: "numeric",
+  month: "short",
+  hour: "numeric",
+  minute: "numeric",
+  hour12: true,
+};
+
+
 // const token = getCookie("token");
 const dateNow = new Intl.DateTimeFormat("es-PA", opciones).format(d);
 
