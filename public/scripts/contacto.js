@@ -27,12 +27,12 @@ function submitForm() {
 
         formData.append("date", dateNow);
 
-        if (formData.get('name').length == 0 || formData.get('phone').length == 0) {
+        /*if (formData.get('fullname').length == 0 || formData.get('phone').length == 0) {
 
             document.getElementById('msg-error').innerHTML = `<span style="color:darkred;">Required fill empty field.</span>`;
 
             return false;
-        } 
+        } */
 
           await fetch(url, {
             method: 'POST',
