@@ -86,24 +86,38 @@ button {
 		place-content: center;
 		display: grid;
 		margin: 0 auto;
+		padding: 18px;
+		width: 100%;
+	height: auto;
+	overflow: hidden;
 	}
 }
 
 .form-group {
 	/*display: flex;*/
-	/*justify-content: center;*/
+	justify-content: center;
 	padding: 10px;
+	max-width: 50vw;
+	width: 100%;
+	/*height: auto;*/
+	/*overflow: hidden;*/
 	margin: 0 auto;
-	/*width: auto;*/
+	
 	/*place-content: center;*/
 	/*justify-self: center;*/
 
 	input, textarea {
-		width: 250px;
+		width: 100%;
 		border-radius: 5px;
 		border: none;
 		padding: 5px;
+		/*width: 50vw;*/
 	}
+}
+
+#file-content {
+	border: 2px solid #fafafa;
+	border-radius: 10px;
 }
 
 footer {

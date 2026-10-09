@@ -1,15 +1,20 @@
 const form = document.getElementById('formula');
-const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
-
+const url = `https://visits-christian-guardias-projects.vercel.app/form/apartaestudio_array`;
+const btn = document.getElementById("demo-form");
+// const token = getCookie("token");
+const dateNow = new Intl.DateTimeFormat("es-PA", opciones).format(d);
 
 function submitForm() {
 
     form.addEventListener('submit', async function(event) {
         event.preventDefault(); 
+        btn.disabled = true;
              
         const formData = new FormData(form);
 
-        if (formData.get('email').length == 0 || formData.get('control').length == 0) {
+        formData.append("date", dateNow);
+
+        if (formData.get('name').length == 0 || formData.get('phone').length == 0) {
 
             document.getElementById('msg-error').innerHTML = `<span style="color:darkred;">Required fill empty field.</span>`;
 
@@ -18,13 +23,39 @@ function submitForm() {
 
           await fetch(url, {
             method: 'POST',
-            body: JSON.stringify({
-                email: formData.get('email'), 
-                control: formData.get('control'),
-                web: formData.get('web'),
-            }),
+            headers: {
+                // Authorization: `Bearer ${token}`,
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Methods": "GET,HEAD,POST,OPTIONS",
+          },
+            body: formData,
           })
-          .then((response) => response.text())
+          .then((response) => {
+            response.text();
+            if (response.status === 500) {
+              message.innerText = res.message;
+              // alert("File size too large. MAX SIZE = 4.5mb");
+              // window.location.reload();
+            }
+
+            if (response.status === 413) {
+              message.innerText = "File size too large. MAX SIZE = 4.5mb";
+              alert("File size too large. MAX SIZE = 4.5mb");
+              window.location.reload();
+            }
+
+            if (res.message === "LIMIT_FILE_SIZE") {
+              alert("File size too large. MAX SIZE = 4.5mb");
+              window.location.reload();
+            }
+
+            if (res.message === "Invalid token") {
+              removeCookie("token");
+              sectionB.setAttribute("class", "hidden");
+              sectionA.removeAttribute("class", "hidden");
+              return (message.innerText = res.message + " Inicia sesion");
+            }
+            })
           .then((data) => console.log(data))
           .catch((error) => {
             console.error('Error:', error);
