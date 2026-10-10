@@ -3,19 +3,36 @@ const url = `https://visits-christian-guardias-projects.vercel.app/form/apartaes
 const input = document.getElementsByTagName("input");
 const btn = document.getElementById("demo-form");
 const message = document.getElementById("msg-error");
+const preview = document.getElementsByClassName('preview');
 // const token = getCookie("token");
 
 let imgs = [];
+
 const reader = new FileReader();
 
-input[3].addEventListener("change", function (event) {
-  const file = event.target.files[0];
+function loadPreviewIMG(e,a,file) {
+  reader.onload = (e) => {
+    preview[a].innerHTML = `<img src="${reader.result}" alt="${e.target.name}" width="100" height="130">`;
+    preview[a].style.display = "block";
+    };
+    reader.onerror = () => {
+      errorMsg.textContent = "Error reading file.";
+    };
+    reader.readAsDataURL(file);
+}
+
+input[3].addEventListener("change", function (e) {
+  const file = e.target.files[0];
+  if(!file) return;
   imgs.push(file);
+  loadPreviewIMG(e,0,file);
 });
 
-input[4].addEventListener("change", function (event) {
-  const file = event.target.files[0];
+input[4].addEventListener("change", function (e) {
+  const file = e.target.files[0];
+  if(!file) return;
   imgs.push(file);
+  loadPreviewIMG(e,1,file);
 });
 
 const opciones = {
