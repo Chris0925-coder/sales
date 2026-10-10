@@ -118,6 +118,9 @@ button {
 #file-content {
 	border: 2px solid #fafafa;
 	border-radius: 10px;
+	width: 100%;
+	max-width: 50vw;
+    margin: 0 auto;
 }
 
 footer {
