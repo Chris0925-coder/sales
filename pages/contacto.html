@@ -22,71 +22,118 @@
 	<link rel="canonical" href="https://www.apartamentodealquiler.shop/pages/contacto.html"> 
 </head>
 <body>
-	<header>
-		<ul id="page">
-			<li><a href="../index.html" title="ir a inicio">Inicio</a></li>
-			<li><a href="video.html" title="ir a video">Video</a></li>
-		</ul>
-	</header>
-	<main>
+    <header>
+      <ul id="page">
+        <li><a href="../index.html" title="ir a inicio">Inicio</a></li>
+        <li><a href="video.html" title="ir a video">Video</a></li>
+      </ul>
+    </header>
+    <main>
+      <h1>Formulario web, deja un mensaje | Whatsapp: 6130-0330</h1>
 
-		<h1>Formulario web, deja un mensaje | Whatsapp: 6130-0330</h1>
+      <div class="card-body">
+        <form id="formula" enctype="multipart/form-data">
+          <h2>Contacto</h2>
+          <div class="form-group">
+            <input
+              type="text"
+              name="fullname"
+              class="form-control"
+              placeholder="Nombre completo"
+              required
+            /><span style="font-size: 8px"> Requerido</span>
+          </div>
+          <div class="form-group">
+            <input
+              type="tel"
+              name="phone"
+              class="form-control"
+              placeholder="Teléfono"
+              required
+            /><span style="font-size: 8px"> Requerido</span>
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="mail"
+              class="form-control"
+              placeholder="Email"
+            />
+          </div>
+          <div id="file-content">
+            <div class="form-group">
+              <label style="color: #434343">Cedúla</label>
+              <input
+                type="file"
+                class="form-control"
+                placeholder="Cedula"
+                accept="image/*"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <label style="color: #434343">Referencias</label>
+              <input
+                type="file"
+                class="form-control"
+                placeholder="Referencias"
+                accept="image/*"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="form-group">
+            <textarea
+              class="form-control"
+              name="control"
+              placeholder="Comentarios"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <br />
+          <div class="form-group">
+            <input type="hidden" name="web" value="Apartaestudio" />
+          </div>
+          <br />
+          <div class="form-group">
+            <button
+              title="Enviar"
+              type="submit"
+              class="btn btn-primary btn-block"
+              id="demo-form"
+            >
+              Enviar
+            </button>
+          </div>
 
-		<div class="card-body">
-			<form id="formula" enctype="multipart/form-data">
-				<h2>Contacto</h2>
-				<div class="form-group">
-					<input type="text" name="fullname" class="form-control" placeholder="Nombre completo" required><span style="font-size: 8px;"> Requerido</span>
-				</div>
-				<div class="form-group">
-					<input type="tel" name="phone" class="form-control" placeholder="Teléfono" required><span style="font-size: 8px;"> Requerido</span>
-				</div>
-				<div class="form-group">
-					<input type="email" name="mail" class="form-control" placeholder="Email">
-				</div>
-				<!-- <div class="form-group" id="file-content">
-					<input type="file" name="filename" class="form-control" placeholder="Cedula">
-				</div> -->
-				<div id="file-content">
-				<div class="form-group">
-					<label style="color:#434343">Cedúla</label>
-					<input type="file" name="filename" class="form-control" placeholder="Referencias">
-				</div>
-			    <br>
-			    <div class="form-group">
-					<label style="color:#434343">Referencias</label>
-					<input type="file" name="references" class="form-control" placeholder="Referencias">
-				</div>
-				</div>
-				<br>
-				<div class="form-group">
-					<textarea class="form-control" name="control" placeholder="Comentarios" cols="30" rows="10"></textarea>
-				</div>
-				<br>
-				<div class="form-group">
-                    <input type="hidden" name="web" value="Apartaestudio">
-                </div>
-                <br>
-				<div class="form-group">
-					<button title="Enviar" type="submit" class="btn btn-primary btn-block" id="demo-form">
-						Enviar
-					</button>
-				</div>
+          <span id="msg-error"></span>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <address>
+        <p>
+          Teléfono:
+          <a
+            href="https://wa.me/50761300330?text=Hola%20estoy%20interesado%20y%20deseo%20más%20información."
+            >6130-0330</a
+          >
+        </p>
+        Panamá, Villas de San José
+      </address>
 
-				<span id="msg-error"></span>
-			</form>
-		</div>
-	</main>
-	<footer>
-		<address>
-			<p>Teléfono: <a href="https://wa.me/50761300330?text=Hola%20estoy%20interesado%20y%20deseo%20más%20información.">6130-0330</a></p>
-			Panamá, Villas de San José
-		</address>
-
-		<div class="container-iframe">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.2586866810542!2d-79.50459003493307!3d9.05108447672924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab56300cb45897%3A0xd03b990de47285cd!2sCalle%2015601b%2015601%2C%20San%20Miguelito%2C%20Provincia%20de%20Panam%C3%A1!5e0!3m2!1sen!2spa!4v1774419242727!5m2!1sen!2spa" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-		</div>
-	</footer>
-
-</body>
+      <div class="container-iframe">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.2586866810542!2d-79.50459003493307!3d9.05108447672924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab56300cb45897%3A0xd03b990de47285cd!2sCalle%2015601b%2015601%2C%20San%20Miguelito%2C%20Provincia%20de%20Panam%C3%A1!5e0!3m2!1sen!2spa!4v1774419242727!5m2!1sen!2spa"
+          width="200"
+          height="100"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+  </body>
 </html>
