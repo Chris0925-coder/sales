@@ -1,6 +1,5 @@
 const form = document.getElementById("formula");
-// const url = `https://visits-christian-guardias-projects.vercel.app/form/apartaestudio`;
-const url = `http://localhost:3000/form/apartaestudio`;
+const url = `https://visits-christian-guardias-projects.vercel.app/form/apartaestudio`;
 const input = document.getElementsByTagName("input");
 const btn = document.getElementById("demo-form");
 const message = document.getElementById("msg-error");
