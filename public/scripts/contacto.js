@@ -119,10 +119,10 @@ function submitForm() {
         return (message.innerHTML = `<span style="color:darkred;">${error}</span>`);
       });
 
-    // alert("Form submitted successfully!");
-    console.log("successfully");
+    alert("Form submitted successfully!");
+    // console.log("successfully");
 
-    // window.location.href = "https://www.apartamentodealquiler.shop/";
+    window.location.href = "https://www.apartamentodealquiler.shop/";
   });
 }
 
