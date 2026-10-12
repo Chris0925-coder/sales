@@ -1,12 +1,13 @@
 const form = document.getElementById("formula");
-const url = `https://visits-christian-guardias-projects.vercel.app/form/apartaestudio`;
+// const url = `https://visits-christian-guardias-projects.vercel.app/form/apartaestudio`;
+const url = `http://localhost:3000/form/apartaestudio`;
 const input = document.getElementsByTagName("input");
 const btn = document.getElementById("demo-form");
 const message = document.getElementById("msg-error");
 const preview = document.getElementsByClassName('preview');
 // const token = getCookie("token");
 
-let imgs = [];
+let imgs = ["img.png","img2.jpg"];
 
 const reader = new FileReader();
 
@@ -18,20 +19,23 @@ function loadPreviewIMG(e,a,file) {
     reader.onerror = () => {
       errorMsg.textContent = "Error reading file.";
     };
+
     reader.readAsDataURL(file);
 }
 
 input[3].addEventListener("change", function (e) {
-  const file = e.target.files[0];
+  let file = e.target.files[0];
   if(!file) return;
-  imgs.push(file);
+  // imgs.push(file);
+  imgs.splice(0, 1, file);
   loadPreviewIMG(e,0,file);
 });
 
 input[4].addEventListener("change", function (e) {
-  const file = e.target.files[0];
+  let file = e.target.files[0];
   if(!file) return;
-  imgs.push(file);
+  // imgs.push(file);
+  imgs.splice(1, 1, file);
   loadPreviewIMG(e,1,file);
 });
 
@@ -115,10 +119,10 @@ function submitForm() {
         return (message.innerHTML = `<span style="color:darkred;">${error}</span>`);
       });
 
-    alert("Form submitted successfully!");
-    // console.log("successfully");
+    // alert("Form submitted successfully!");
+    console.log("successfully");
 
-    window.location.href = "https://www.apartamentodealquiler.shop/";
+    // window.location.href = "https://www.apartamentodealquiler.shop/";
   });
 }
 
