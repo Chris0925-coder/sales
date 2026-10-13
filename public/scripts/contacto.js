@@ -1,5 +1,6 @@
 const form = document.getElementById("formula");
 const url = `https://visits-christian-guardias-projects.vercel.app/form/apartaestudio`;
+// const url = `http://localhost:3000/form/apartaestudio`;
 const input = document.getElementsByTagName("input");
 const btn = document.getElementById("demo-form");
 const message = document.getElementById("msg-error");
@@ -60,10 +61,11 @@ function submitForm() {
     const formData = new FormData(form);
 
     formData.append("date", dateNow);
+    
 
     imgs.forEach((file, index) => {
       // Append each file with the same field name 'images'
-      formData.append("filename", file);
+      formData.append(`filename`, file);
     });
 
      if (
@@ -103,12 +105,17 @@ function submitForm() {
             window.location.reload();
           }
 
-          if (response.message === "Invalid token") {
-            removeCookie("token");
-            sectionB.setAttribute("class", "hidden");
-            sectionA.removeAttribute("class", "hidden");
-            return (message.innerText = response.message + " Inicia sesion");
+          // if (response.message === "Invalid token") {
+          //   removeCookie("token");
+          //   sectionB.setAttribute("class", "hidden");
+          //   sectionA.removeAttribute("class", "hidden");
+          //   return (message.innerText = response.message + " Inicia sesion");
+          // }
+          if (response.ok) {
+            alert("Form submitted successfully!");
+            window.location.href = "https://www.apartamentodealquiler.shop/";
           }
+  
         }
       })
       .then((data) => console.log(data))
@@ -118,10 +125,10 @@ function submitForm() {
         return (message.innerHTML = `<span style="color:darkred;">${error}</span>`);
       });
 
-    alert("Form submitted successfully!");
+    // alert("Form submitted successfully!");
     // console.log("successfully");
 
-    window.location.href = "https://www.apartamentodealquiler.shop/";
+    // window.location.href = "https://www.apartamentodealquiler.shop/";
   });
 }
 
