@@ -23,20 +23,43 @@ function loadPreviewIMG(e,a,file) {
     reader.readAsDataURL(file);
 }
 
+function totalFileSize(a,b) {
+  let fileSize = 1024 * 1024 * 4.5;
+
+  if ((a+b) > fileSize) {
+    document.getElementById("msg-error").innerHTML =
+        `<span style="color:darkred;">Maximo peso permitido  4.5 MB</span>`;
+
+        btn.disabled = true;
+  } else {
+    btn.disabled = false;
+    document.getElementById("msg-error").innerHTML =
+        `<span style="color:green;">Envía...</span>`;
+  }
+}
+
 input[3].addEventListener("change", function (e) {
   let file = e.target.files[0];
   if(!file) return;
   // imgs.push(file);
+  // totalFileSize(file.size + 0)
   imgs.splice(0, 1, file);
   loadPreviewIMG(e,0,file);
+
+  totalFileSize(imgs[0].size, 0);
+
 });
 
 input[4].addEventListener("change", function (e) {
   let file = e.target.files[0];
   if(!file) return;
   // imgs.push(file);
+
   imgs.splice(1, 1, file);
   loadPreviewIMG(e,1,file);
+
+  totalFileSize(imgs[0].size, imgs[1].size);
+
 });
 
 const opciones = {
@@ -97,14 +120,14 @@ function submitForm() {
 
           if (response.status === 413) {
             message.innerText = "File size too large. MAX SIZE = 4.5mb";
-            alert("File size too large. MAX SIZE = 4.5mb");
+            alert("File size too large. MAX SIZE = 4mb");
             window.location.reload();
           }
 
-          if (response.message === "LIMIT_FILE_SIZE") {
-            alert("File size too large. MAX SIZE = 4.5mb");
-            window.location.reload();
-          }
+          // if (response.message === "LIMIT_FILE_SIZE") {
+          //   alert("File size too large. MAX SIZE = 4mb");
+          //   window.location.reload();
+          // }
 
           if (response.status === 200 || response.status === 201) {
             alert("Form submitted successfully!");
