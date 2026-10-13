@@ -26,16 +26,16 @@ function loadPreviewIMG(e,a,file) {
 input[3].addEventListener("change", function (e) {
   let file = e.target.files[0];
   if(!file) return;
-  // imgs.push(file);
-  imgs.splice(0, 1, file);
+  imgs.push(file);
+  // imgs.splice(0, 1, file);
   loadPreviewIMG(e,0,file);
 });
 
 input[4].addEventListener("change", function (e) {
   let file = e.target.files[0];
   if(!file) return;
-  // imgs.push(file);
-  imgs.splice(1, 1, file);
+  imgs.push(file);
+  // imgs.splice(1, 1, file);
   loadPreviewIMG(e,1,file);
 });
 
@@ -88,6 +88,8 @@ function submitForm() {
       body: formData,
     })
       .then((response) => {
+        console.log(response);
+        console.log(response.ok);
         response.text();
         if (response.status === 500) {
           message.innerText = response.message;
@@ -113,7 +115,7 @@ function submitForm() {
           // }
           if (response.ok) {
             alert("Form submitted successfully!");
-            window.location.href = "https://www.apartamentodealquiler.shop/";
+            return window.location.href = "https://www.apartamentodealquiler.shop/";
           }
   
         }
