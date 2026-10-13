@@ -88,13 +88,12 @@ function submitForm() {
       body: formData,
     })
       .then((response) => {
-        console.log(response);
-        console.log(response.ok);
         response.text();
         if (response.status === 500) {
-          message.innerText = response.message;
+          message.innerText = response.status + " Server error";
           // alert("File size too large. MAX SIZE = 4.5mb");
           // window.location.reload();
+        }
 
           if (response.status === 413) {
             message.innerText = "File size too large. MAX SIZE = 4.5mb";
@@ -102,10 +101,16 @@ function submitForm() {
             window.location.reload();
           }
 
-          // if (response.message === "LIMIT_FILE_SIZE") {
-          //   alert("File size too large. MAX SIZE = 4.5mb");
-          //   window.location.reload();
-          // }
+          if (response.message === "LIMIT_FILE_SIZE") {
+            alert("File size too large. MAX SIZE = 4.5mb");
+            window.location.reload();
+          }
+
+          if (response.status === 200 || response.status === 201) {
+            alert("Form submitted successfully!");
+            window.location.href = "https://www.apartamentodealquiler.shop/";
+          }
+
 
           // if (response.message === "Invalid token") {
           //   removeCookie("token");
@@ -113,19 +118,12 @@ function submitForm() {
           //   sectionA.removeAttribute("class", "hidden");
           //   return (message.innerText = response.message + " Inicia sesion");
           // }
-          if (response.ok) {
-            alert("Form submitted successfully!");
-            return window.location.href = "https://www.apartamentodealquiler.shop/";
-          }
-  
-        }
       })
       .catch((error) => {
         console.error("Error:", error);
 
         return (message.innerHTML = `<span style="color:darkred;">${error}</span>`);
       });
-
     // alert("Form submitted successfully!");
     // console.log("successfully");
 
