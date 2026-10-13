@@ -26,16 +26,16 @@ function loadPreviewIMG(e,a,file) {
 input[3].addEventListener("change", function (e) {
   let file = e.target.files[0];
   if(!file) return;
-  imgs.push(file);
-  // imgs.splice(0, 1, file);
+  // imgs.push(file);
+  imgs.splice(0, 1, file);
   loadPreviewIMG(e,0,file);
 });
 
 input[4].addEventListener("change", function (e) {
   let file = e.target.files[0];
   if(!file) return;
-  imgs.push(file);
-  // imgs.splice(1, 1, file);
+  // imgs.push(file);
+  imgs.splice(1, 1, file);
   loadPreviewIMG(e,1,file);
 });
 
@@ -102,10 +102,10 @@ function submitForm() {
             window.location.reload();
           }
 
-          if (response.message === "LIMIT_FILE_SIZE") {
-            alert("File size too large. MAX SIZE = 4.5mb");
-            window.location.reload();
-          }
+          // if (response.message === "LIMIT_FILE_SIZE") {
+          //   alert("File size too large. MAX SIZE = 4.5mb");
+          //   window.location.reload();
+          // }
 
           // if (response.message === "Invalid token") {
           //   removeCookie("token");
@@ -120,7 +120,6 @@ function submitForm() {
   
         }
       })
-      .then((data) => console.log(data))
       .catch((error) => {
         console.error("Error:", error);
 
