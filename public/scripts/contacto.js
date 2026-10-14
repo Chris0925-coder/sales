@@ -7,7 +7,7 @@ const message = document.getElementById("msg-error");
 const preview = document.getElementsByClassName('preview');
 // const token = getCookie("token");
 
-let imgs = ["img.png","img2.jpg"];
+let imgs = [];
 
 const reader = new FileReader();
 
@@ -38,25 +38,29 @@ function totalFileSize(a,b) {
   }
 }
 
+
 input[3].addEventListener("change", function (e) {
   let file = e.target.files[0];
   if(!file) return;
-  // imgs.push(file);
-  // totalFileSize(file.size + 0)
-  imgs.splice(0, 1, file);
+
+  imgs.splice(0, 2, file, imgs[1]);
+
   loadPreviewIMG(e,0,file);
 
-  totalFileSize(imgs[0].size, 0);
+  if (!imgs[1]) return totalFileSize(imgs[0].size, 0);
+
+  totalFileSize(imgs[0].size, imgs[1].size);
 
 });
 
 input[4].addEventListener("change", function (e) {
   let file = e.target.files[0];
   if(!file) return;
-  // imgs.push(file);
 
-  imgs.splice(1, 1, file);
+  imgs.splice(0, 2,imgs[0], file);
   loadPreviewIMG(e,1,file);
+
+  if (!imgs[0]) return totalFileSize(0, imgs[1].size);
 
   totalFileSize(imgs[0].size, imgs[1].size);
 
@@ -81,13 +85,14 @@ function submitForm() {
 
     btn.disabled = true;
 
+    document.getElementById("msg-error").innerHTML =
+        `<span style="color:green;">Envíando...<img src="../public/svg/circle.svg" alt="loading" width="90" height="90"></span>`;
+
     const formData = new FormData(form);
 
     formData.append("date", dateNow);
-    
 
     imgs.forEach((file, index) => {
-      // Append each file with the same field name 'images'
       formData.append(`filename`, file);
     });
 
@@ -113,7 +118,7 @@ function submitForm() {
       .then((response) => {
         response.text();
         if (response.status === 500) {
-          message.innerText = response.status + " Server error";
+          message.innerHTML = `<span style="color:darkred; font-size:bold;"> ${response.status} Server error </span>`;
           // alert("File size too large. MAX SIZE = 4.5mb");
           // window.location.reload();
         }
@@ -123,11 +128,6 @@ function submitForm() {
             alert("File size too large. MAX SIZE = 4mb");
             window.location.reload();
           }
-
-          // if (response.message === "LIMIT_FILE_SIZE") {
-          //   alert("File size too large. MAX SIZE = 4mb");
-          //   window.location.reload();
-          // }
 
           if (response.status === 200 || response.status === 201) {
             alert("Form submitted successfully!");
@@ -147,10 +147,6 @@ function submitForm() {
 
         return (message.innerHTML = `<span style="color:darkred;">${error}</span>`);
       });
-    // alert("Form submitted successfully!");
-    // console.log("successfully");
-
-    // window.location.href = "https://www.apartamentodealquiler.shop/";
   });
 }
 
